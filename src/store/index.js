@@ -1,7 +1,6 @@
 import { createStore } from 'redux';
 
-function reducer(){
-    return {
+const INITIAL_STATE = {
         activeLesson: null,
         activeModule: null,
         modules: [
@@ -24,7 +23,13 @@ function reducer(){
                 ]
             }
         ]
-    }
+    };
+
+
+
+function reducer(state = INITIAL_STATE, action){
+    console.log('teste')
+    return state;
 }
 
 const store = createStore(reducer);
